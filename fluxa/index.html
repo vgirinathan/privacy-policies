@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fluxa Launcher — Privacy Policy</title>
+<style>
+  :root {
+    --bg: #f7faf8;
+    --bg-raised: #ffffff;
+    --text: #14231a;
+    --text-muted: #5b6d61;
+    --accent: #2e7d32;
+    --accent-strong: #1b5e20;
+    --accent-soft: #e7f3ea;
+    --rule: #d7e4da;
+    --mono-tag-bg: #eef3f0;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #10160f;
+      --bg-raised: #171f16;
+      --text: #e9f1ea;
+      --text-muted: #98a99c;
+      --accent: #6fcf73;
+      --accent-strong: #8fe093;
+      --accent-soft: #1c2b1c;
+      --rule: #2a362a;
+      --mono-tag-bg: #1c261b;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+    display: grid;
+    grid-template-columns: minmax(0, 680px) 240px;
+    gap: 64px;
+    justify-content: center;
+  }
+
+  @media (max-width: 920px) {
+    .page {
+      grid-template-columns: minmax(0, 680px);
+      justify-content: stretch;
+    }
+    nav.toc { display: none; }
+  }
+
+  header.masthead {
+    grid-column: 1 / -1;
+    max-width: 680px;
+    margin-bottom: 8px;
+  }
+
+  .eyebrow {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+  }
+
+  h1 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+    font-size: clamp(32px, 5vw, 44px);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 0 0 12px;
+    text-wrap: balance;
+  }
+
+  .dek {
+    font-size: 17px;
+    color: var(--text-muted);
+    margin: 0 0 4px;
+    max-width: 58ch;
+  }
+
+  .meta-row {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
+    font-size: 12.5px;
+    color: var(--text-muted);
+  }
+  .meta-row strong { color: var(--text); font-weight: 600; }
+
+  main { min-width: 0; }
+
+  .callout {
+    background: var(--accent-soft);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin: 0 0 44px;
+  }
+  .callout h2 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    color: var(--accent-strong);
+    margin: 0 0 12px;
+  }
+  .callout ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+  .callout li { margin-bottom: 8px; }
+  .callout li:last-child { margin-bottom: 0; }
+
+  section { margin-bottom: 40px; scroll-margin-top: 24px; }
+  section:last-of-type { margin-bottom: 0; }
+
+  h2.section-title {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    margin: 0 0 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  h2.section-title .num {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  p { margin: 0 0 14px; max-width: 66ch; }
+  p:last-child { margin-bottom: 0; }
+
+  ul.plain { margin: 0 0 14px; padding-left: 20px; max-width: 62ch; }
+  ul.plain li { margin-bottom: 8px; }
+
+  table.perm-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 4px 0 14px;
+    font-size: 14.5px;
+  }
+  table.perm-table th,
+  table.perm-table td {
+    text-align: left;
+    padding: 10px 14px 10px 0;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  table.perm-table th {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+  .tag {
+    display: inline-block;
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
+    font-size: 12px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: var(--mono-tag-bg);
+    color: var(--text);
+  }
+
+  a { color: var(--accent); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; }
+  a:hover { text-decoration-color: var(--accent-strong); }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  nav.toc {
+    padding-top: 4px;
+    position: sticky;
+    top: 40px;
+    align-self: start;
+    height: max-content;
+  }
+  nav.toc .toc-label {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+  nav.toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid var(--rule);
+  }
+  nav.toc li { margin: 0; }
+  nav.toc a {
+    display: block;
+    padding: 7px 0 7px 16px;
+    margin-left: -1px;
+    border-left: 1px solid transparent;
+    font-size: 13.5px;
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+  nav.toc a:hover { color: var(--text); border-left-color: var(--accent); }
+
+  footer {
+    grid-column: 1 / -1;
+    max-width: 680px;
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    font-size: 13.5px;
+    color: var(--text-muted);
+  }
+  footer a { color: var(--text-muted); }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <p class="eyebrow">Fluxa Launcher · Privacy Policy</p>
+    <h1>What happens on your home screen, in plain terms</h1>
+    <p class="dek">Fluxa is a local-first, privacy-respecting Android launcher built around your apps, spaces, and search. This page explains exactly what the app does — and does not — do with your data.</p>
+    <div class="meta-row">
+      <span><strong>Effective</strong> August 31, 2026</span>
+      <span><strong>Applies to</strong> Fluxa Launcher (com.gibriapps.fluxa)</span>
+      <span><strong>Contact</strong> <a href="mailto:gibri.apps@gmail.com">gibri.apps@gmail.com</a></span>
+    </div>
+  </header>
+
+  <nav class="toc" aria-label="Sections">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#apps">1. Installed applications</a></li>
+      <li><a href="#preferences">2. Preferences &amp; Spaces</a></li>
+      <li><a href="#intelligence">3. Personal Intelligence &amp; history</a></li>
+      <li><a href="#permissions">4. Permissions</a></li>
+      <li><a href="#ads">5. Advertising &amp; analytics</a></li>
+      <li><a href="#children">6. Children's privacy</a></li>
+      <li><a href="#backup">7. Backup &amp; cloud transfer</a></li>
+      <li><a href="#retention">8. Retention &amp; deletion</a></li>
+      <li><a href="#changes">9. Changes to this policy</a></li>
+      <li><a href="#contact">10. Contact</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <div class="callout">
+      <h2>The short version</h2>
+      <ul>
+        <li>Fluxa has no accounts, no sign-in, and no external servers. Everything runs entirely on your device.</li>
+        <li>Your app list, favorites, Spaces, search queries, and launch activity never leave your phone — there is nowhere for Fluxa to send them.</li>
+        <li>Zero sensitive permissions: Fluxa does not request Usage Access (<code>PACKAGE_USAGE_STATS</code>), Accessibility Service, notification access, contacts, SMS, or location.</li>
+        <li>Zero analytics, zero tracking SDKs, zero cloud AI APIs, and zero advertising.</li>
+      </ul>
+    </div>
+
+    <section id="apps">
+      <h2 class="section-title"><span class="num">1.</span> Installed applications</h2>
+      <p>As your Android home launcher, Fluxa queries the operating system's standard <code>LauncherApps</code> service to discover launchable applications installed on your device, display their icons and labels in the app drawer, and launch them when selected.</p>
+      <p>This discovery happens purely locally in real time. Fluxa never uploads, synchronizes, or transmits your list of installed applications to any external server.</p>
+    </section>
+
+    <section id="preferences">
+      <h2 class="section-title"><span class="num">2.</span> Preferences &amp; Spaces</h2>
+      <p>Fluxa stores your personal launcher setup locally using Android's on-device DataStore and Room database:</p>
+      <ul class="plain">
+        <li><strong>Spaces &amp; Space Apps</strong> — custom spaces you create (e.g. Home, Work) and apps you explicitly assign to them.</li>
+        <li><strong>Favorites</strong> — apps you pin for quick access.</li>
+        <li><strong>Category Overrides</strong> — manual category adjustments you make for specific apps.</li>
+        <li><strong>Launcher Settings</strong> — theme mode (light/dark/system), accent color, icon size, grid density, gestures, and UI visibility options.</li>
+      </ul>
+      <p>This configuration data stays in Fluxa's private on-device storage sandbox.</p>
+    </section>
+
+    <section id="intelligence">
+      <h2 class="section-title"><span class="num">3.</span> Personal Intelligence &amp; launch history</h2>
+      <p>Fluxa includes a local-first, deterministic ranking engine that adapts search and space ordering based on your direct interactions inside Fluxa. This operates under strict privacy and data minimization rules:</p>
+      <ul class="plain">
+        <li><strong>What is recorded:</strong> Only direct launches performed within Fluxa (via Search, Drawer, Favorites, Spaces, or Categories) with a local timestamp.</li>
+        <li><strong>What is NOT recorded:</strong> Fluxa does not monitor background usage, other apps, notifications, screen content, or system activity.</li>
+        <li><strong>Bounded retention:</strong> Launch history is capped at a maximum of 100 entries, and entries older than 30 days are automatically pruned.</li>
+        <li><strong>User control:</strong> You can toggle "Use local launch history" off at any time in Settings &gt; Personalization, or instantly wipe all recorded activity via "Clear launch history."</li>
+      </ul>
+    </section>
+
+    <section id="permissions">
+      <h2 class="section-title"><span class="num">4.</span> Permissions</h2>
+      <table class="perm-table">
+        <thead>
+          <tr><th>Permission / Role</th><th>What it's for</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="tag">HOME / LAUNCHER</span></td>
+            <td>Allows Fluxa to act as your default home screen, respond to the Home button/gesture, and launch applications.</td>
+          </tr>
+          <tr>
+            <td><span class="tag">&lt;queries&gt; (Launcher)</span></td>
+            <td>Standard Android package visibility query that lets Fluxa discover launchable activities. Fluxa does NOT use broad <code>QUERY_ALL_PACKAGES</code> permission.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Fluxa requires <strong>no network permissions</strong> (<code>android.permission.INTERNET</code> is not declared), <strong>no location permissions</strong>, <strong>no contact permissions</strong>, and <strong>no device monitoring services</strong>.</p>
+    </section>
+
+    <section id="ads">
+      <h2 class="section-title"><span class="num">5.</span> Advertising &amp; analytics</h2>
+      <p>Fluxa contains <strong>no advertising SDKs</strong>, <strong>no analytics SDKs</strong>, and <strong>no third-party tracking telemetry</strong>. We do not profile users, track usage, or monetize your personal data.</p>
+    </section>
+
+    <section id="children">
+      <h2 class="section-title"><span class="num">6.</span> Children's privacy</h2>
+      <p>Fluxa is a general-audience Android launcher. It does not knowingly collect, transmit, or request personal information from anyone, including children under 13.</p>
+    </section>
+
+    <section id="backup">
+      <h2 class="section-title"><span class="num">7.</span> Backup &amp; cloud transfer</h2>
+      <p>If you use Android's built-in system backup (Google Backup / Device Transfer), your layout preferences (Spaces, Favorites, theme, and grid settings) can be preserved when you switch phones.</p>
+      <p><strong>Behavioral launch history is explicitly excluded</strong> from backup and device transfer rules to ensure your daily activity signals remain strictly private on the original device.</p>
+    </section>
+
+    <section id="retention">
+      <h2 class="section-title"><span class="num">8.</span> Retention &amp; deletion</h2>
+      <p>Because Fluxa does not collect or transmit data to any external server, there is no data stored on our end to delete. You have complete control over all data on your device:</p>
+      <ul class="plain">
+        <li>Clear launch history directly in <strong>Fluxa Settings &gt; Personalization &gt; Clear launch history</strong>.</li>
+        <li>Wipe all app data via Android's <strong>Settings &gt; Apps &gt; Fluxa &gt; Storage &gt; Clear Storage</strong>.</li>
+        <li>Uninstalling Fluxa immediately deletes all locally stored preferences, spaces, and history.</li>
+      </ul>
+    </section>
+
+    <section id="changes">
+      <h2 class="section-title"><span class="num">9.</span> Changes to this policy</h2>
+      <p>If this privacy policy is updated, the "Effective" date at the top of the page will be updated accordingly. Any significant change will be detailed in the app's Google Play Store release notes.</p>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title"><span class="num">10.</span> Contact</h2>
+      <p>If you have any questions about this privacy policy or Fluxa's local-first architecture, please contact us at <a href="mailto:gibri.apps@gmail.com">gibri.apps@gmail.com</a>.</p>
+    </section>
+
+    <footer>
+      Fluxa Launcher is developed by GiBri Apps.
+    </footer>
+  </main>
+</div>
+</body>
+</html>
